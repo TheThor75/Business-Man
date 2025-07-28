@@ -197,3 +197,203 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Busness-Man</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header identique à index.html -->
+    <header>
+      <div class="logo">B<span>M</span></div>
+
+      <div class="desktop-nav">
+        <ul class="desktop-menu">
+          <li>
+            <a href="index.html#article" data-i18n="articles">Articles</a>
+          </li>
+          <li>
+            <a href="index.html#produit" data-i18n="products">Produits</a>
+          </li>
+          <li><a href="index.html#divers" data-i18n="misc">Divers</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+        <div class="desktop-language">
+          <button class="language-btn">
+            <i class="fas fa-globe"></i>
+            <span id="current-lang-desktop">FR</span>
+          </button>
+          <div class="language-dropdown">
+            <div class="language-option" data-lang="fr">
+              <i class="fas fa-globe"></i>
+              <span>Français</span>
+            </div>
+            <div class="language-option" data-lang="en">
+              <i class="fas fa-globe"></i>
+              <span>English</span>
+            </div>
+            <div class="language-option" data-lang="zh">
+              <i class="fas fa-globe"></i>
+              <span>中文</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <div class="language-selector language-selector-mobile">
+          <button class="language-btn">
+            <i class="fas fa-globe"></i>
+            <span id="current-lang">FR</span>
+          </button>
+          <div class="language-dropdown">
+            <div class="language-option" data-lang="fr">
+              <i class="fas fa-globe"></i>
+              <span>Français</span>
+            </div>
+            <div class="language-option" data-lang="en">
+              <i class="fas fa-globe"></i>
+              <span>English</span>
+            </div>
+            <div class="language-option" data-lang="zh">
+              <i class="fas fa-globe"></i>
+              <span>中文</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="close-menu" id="closeMenu">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <ul>
+          <li>
+            <a href="index.html#article" data-i18n="articles">Articles</a>
+          </li>
+          <li>
+            <a href="index.html#produit" data-i18n="products">Produits</a>
+          </li>
+          <li><a href="index.html#divers" data-i18n="misc">Divers</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Section Contact (seule dans cette page) -->
+    <section class="contact-section">
+      <h2 data-i18n="contact">Contact</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3 data-i18n="contact-info">Informations de contact</h3>
+          <p><i class="fas fa-envelope"></i> sidagmarag61@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +33 6 12 34 56 78</p>
+          <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+        </div>
+
+        <div class="contact-form">
+          <h3 data-i18n="contact-form-title">Envoyez-nous un message</h3>
+          <form id="contactForm" method="POST">
+            <div class="form-group">
+              <input type="text" name="name" id="name" required />
+              <label for="name" data-i18n="contact-name">Nom complet</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" name="email" id="email" required />
+              <label for="email" data-i18n="contact-email">Adresse email</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="subject" id="subject" required />
+              <label for="subject" data-i18n="contact-subject">Sujet</label>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                required
+              ></textarea>
+              <label for="message" data-i18n="contact-message">Message</label>
+            </div>
+
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Lc5KzUpAAAAAG0NfJN8p0c7f9o8L3cKXJvQvJ3v"
+            ></div>
+
+            <button type="submit" class="btn" data-i18n="contact-submit">
+              Envoyer
+            </button>
+            <div id="formMessage" class="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">BUSNESS-MAN</div>
+        <div class="footer-links">
+          <a href="index.html" data-i18n="home">Accueil</a>
+          <a href="index.html#article" data-i18n="articles">Articles</a>
+          <a href="index.html#produit" data-i18n="products">Produits</a>
+          <a href="index.html#divers" data-i18n="misc">Divers</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+          <a href="#" data-i18n="legal">Mentions légales</a>
+          <a href="#" data-i18n="privacy">Politique de confidentialité</a>
+        </div>
+
+        <div class="newsletter">
+          <h3 data-i18n="newsletter-title">
+            Inscrivez-vous à notre newsletter
+          </h3>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder=""
+              id="email-placeholder"
+              required
+            />
+            <button type="submit" class="btn" data-i18n="subscribe-btn">
+              S'inscrire
+            </button>
+          </form>
+        </div>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="copyright">
+          <span data-i18n="copyright"
+            >©️ 2025 Busness-Man. Tous droits réservés.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="script.js"></script>
+  </body>
+</html>
