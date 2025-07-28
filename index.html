@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busness-Man - Professional Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header avec menu hamburger -->
+    <header>
+      <div class="logo">B<span>M</span></div>
+
+      <div class="desktop-nav">
+        <ul class="desktop-menu">
+          <li><a href="#article" data-i18n="articles">Articles</a></li>
+          <li><a href="#produit" data-i18n="products">Produits</a></li>
+          <li><a href="#divers" data-i18n="misc">Divers</a></li>
+          <!-- Lien vers la nouvelle page contact.html -->
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+        <div class="desktop-language">
+          <button class="language-btn">
+            <i class="fas fa-globe"></i>
+            <span id="current-lang-desktop">FR</span>
+          </button>
+          <div class="language-dropdown">
+            <div class="language-option" data-lang="fr">
+              <i class="fas fa-globe"></i>
+              <span>Français</span>
+            </div>
+            <div class="language-option" data-lang="en">
+              <i class="fas fa-globe"></i>
+              <span>English</span>
+            </div>
+            <div class="language-option" data-lang="zh">
+              <i class="fas fa-globe"></i>
+              <span>中文</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <div class="language-selector language-selector-mobile">
+          <button class="language-btn">
+            <i class="fas fa-globe"></i>
+            <span id="current-lang">FR</span>
+          </button>
+          <div class="language-dropdown">
+            <div class="language-option" data-lang="fr">
+              <i class="fas fa-globe"></i>
+              <span>Français</span>
+            </div>
+            <div class="language-option" data-lang="en">
+              <i class="fas fa-globe"></i>
+              <span>English</span>
+            </div>
+            <div class="language-option" data-lang="zh">
+              <i class="fas fa-globe"></i>
+              <span>中文</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="close-menu" id="closeMenu">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <ul>
+          <li><a href="#article" data-i18n="articles">Articles</a></li>
+          <li><a href="#produit" data-i18n="products">Produits</a></li>
+          <li><a href="#divers" data-i18n="misc">Divers</a></li>
+          <!-- Lien vers la nouvelle page contact.html -->
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Section d'accueil -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 data-i18n="hero-title">
+          Solutions Professionnelles pour Votre Business
+        </h1>
+        <p data-i18n="hero-text">
+          Découvrez notre gamme exclusive de produits et services conçus pour
+          optimiser votre productivité et booster votre croissance.
+        </p>
+        <a href="contact.html" class="btn" data-i18n="discover-btn">
+          Nous contacter
+        </a>
+      </div>
+    </section>
+
+    <!-- Section Articles -->
+    <section id="article" class="section-content">
+      <h2 data-i18n="articles">Articles</h2>
+      <div class="desktop-grid">
+        <!-- Grille desktop (4x2) sera générée en JS -->
+      </div>
+      <div class="mobile-carousel">
+        <div class="carousel-container">
+          <div class="carousel" id="articleCarousel"></div>
+          <button class="carousel-btn prev-btn" data-carousel="article">
+            ❮
+          </button>
+          <button class="carousel-btn next-btn" data-carousel="article">
+            ❯
+          </button>
+        </div>
+        <div class="carousel-indicators" id="articleIndicators"></div>
+      </div>
+    </section>
+
+    <!-- Section Produits -->
+    <section id="produit" class="section-content">
+      <h2 data-i18n="products">Produits</h2>
+      <div class="desktop-grid">
+        <!-- Grille desktop (4x2) -->
+      </div>
+      <div class="mobile-carousel">
+        <div class="carousel-container">
+          <div class="carousel" id="produitCarousel"></div>
+          <button class="carousel-btn prev-btn" data-carousel="produit">
+            ❮
+          </button>
+          <button class="carousel-btn next-btn" data-carousel="produit">
+            ❯
+          </button>
+        </div>
+        <div class="carousel-indicators" id="produitIndicators"></div>
+      </div>
+    </section>
+
+    <!-- Section Divers -->
+    <section id="divers" class="section-content">
+      <h2 data-i18n="misc">Divers</h2>
+      <div class="desktop-grid">
+        <!-- Grille desktop (4x2) -->
+      </div>
+      <div class="mobile-carousel">
+        <div class="carousel-container">
+          <div class="carousel" id="diversCarousel"></div>
+          <button class="carousel-btn prev-btn" data-carousel="divers">
+            ❮
+          </button>
+          <button class="carousel-btn next-btn" data-carousel="divers">
+            ❯
+          </button>
+        </div>
+        <div class="carousel-indicators" id="diversIndicators"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">BUSNESS-MAN</div>
+        <div class="footer-links">
+          <a href="#" data-i18n="home">Accueil</a>
+          <a href="#article" data-i18n="articles">Articles</a>
+          <a href="#produit" data-i18n="products">Produits</a>
+          <a href="#divers" data-i18n="misc">Divers</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+          <a href="#" data-i18n="legal">Mentions légales</a>
+          <a href="#" data-i18n="privacy">Politique de confidentialité</a>
+        </div>
+
+        <div class="newsletter">
+          <h3 data-i18n="newsletter-title">
+            Inscrivez-vous à notre newsletter
+          </h3>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder=""
+              id="email-placeholder"
+              required
+            />
+            <button type="submit" class="btn" data-i18n="subscribe-btn">
+              S'inscrire
+            </button>
+          </form>
+        </div>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="copyright">
+          <span data-i18n="copyright"
+            >©️ 2025 Busness-Man. Tous droits réservés.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="script.js"></script>
+  </body>
+</html>
